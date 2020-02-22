@@ -4,10 +4,9 @@
 
 <head>
   <meta charset="utf-8" />
-  <title></title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Currency Converter</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link rel="stylesheet" href="styles.css" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
@@ -15,18 +14,46 @@
 <body>
   <div class="container">
     <div class="logo">
-      <p class="logo-text">WEATHER</p>
+      <p class="logo-text">Converter</p>
     </div>
-    <div class="LogoForm">
-      <form id = "inputsubmit">
-        <div class="input-group mb-3">
-          <input type="text" id="weatherInput" class="form-control" placeholder="Enter a U.S. City" aria-label="Enter a U.S.City" aria-describedby="button-addon2">
-          <div class="input-group-append">
-            <button id="weatherSubmit" class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button>
-          </div>
-        </div>
-      </form>
+    <div class="converter-body">
+      <div class="amount">
+          <label for="money-dollar">Enter Amount:</label>
+          <input type="text" name="amount-input" value="Number Only">
+      </div>
+      <div class="Currency-From">
+        <label for="from">From:</label>
+          <select id="From">
+            <option value="usd">USD -	United States Dollar</option>
+            <option value="eur">EUR - Euro</option>
+            <option value="jpy">JPY - Japanese Yen</option>
+            <option value="gbp">GBP - Pound Sterling</option>
+            <option value="aud">AUD - Austrlian Dollar</option>
+            <option value="cad">CAD - Canadian Dollar</option>
+            <option value="chf">CHF - Swiss Franc</option>
+            <option value="cny">CNY - Chinese Yuan</option>
+            <option value="hkd">HKD - Hong Kong Dollar</option>
+            <option value="nzd">NZD - New Zealand Dollar</option>
+        </select>
+      </div>
+      <div class="Currency-From">
+        <label for="to">To:</label>
+          <select id="To">
+            <option value="usd">USD -	United States Dollar</option>
+            <option value="eur">EUR - Euro</option>
+            <option value="jpy">JPY - Japanese Yen</option>
+            <option value="gbp">GBP - Pound Sterling</option>
+            <option value="aud">AUD - Austrlian Dollar</option>
+            <option value="cad">CAD - Canadian Dollar</option>
+            <option value="chf">CHF - Swiss Franc</option>
+            <option value="cny">CNY - Chinese Yuan</option>
+            <option value="hkd">HKD - Hong Kong Dollar</option>
+            <option value="nzd">NZD - New Zealand Dollar</option>
+        </select>
+      </div>
     </div>
+
+
 
     <div class="weatherInfo">
       <div id="weatherResults">
@@ -43,8 +70,8 @@
   </div>
 
 
-
-
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
   <script text="type/javascript" src="script.js"> </script>
   <script src="https://kit.fontawesome.com/e7709c55d4.js" crossorigin="anonymous"></script>
