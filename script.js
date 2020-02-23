@@ -52,33 +52,13 @@ document.getElementById("convert").addEventListener('click',function(event) {
       document.getElementById("defaultVal").innerHTML = defaultResult;
       document.getElementById("lastUpdated").innerHTML = "Last Update: " + lastUpdated;
 
+      targetRateNum = 0;
       const urlExchange = "http://data.fixer.io/api/latest?access_key=054952d81def3e70606c8901da7ece5c&symbols=USD,AUD,CAD,CNY,JPY&format=1";
 
       fetch(urlExchange)
         .then(function (responseS){
           return responseS;
         }).then(function(jsonObj){
-            // var tooLittle = false;
-            // let targetRate = JSON.stringify(json.rates_histo);
-            // if (targetRate == "{}"){
-            //   tooLittle = true;
-            // }
-            // if (!tooSmall){
-            //   var open = json.rates_histo.toCurrency.open;
-            //   var low = json.rates_histo.toCurrency.low;
-            //   var high = json.rates_histo.toCurrency.high;
-            //   var close = json.rates_histo.toCurrency.close;
-            //   document.getElementById("open").innerHTML = open;
-            //   document.getElementById("low").innerHTML = low;
-            //   document.getElementById("high").innerHTML = high;
-            //   document.getElementById("close").innerHTML = close;
-            // }
-            // else {
-            //   document.getElementById("lastUpdated").innerHTML = "< 0.1";
-            //   document.getElementById("lastUpdated").innerHTML = "< 0.1";
-            //   document.getElementById("lastUpdated").innerHTML = "< 0.1";
-            //   document.getElementById("lastUpdated").innerHTML = "< 0.1";
-            // }
             document.getElementById("AUD").innerHTML = 1.15;
             document.getElementById("CAD").innerHTML = 1.32;
             document.getElementById("CNY").innerHTML = 7.03;
