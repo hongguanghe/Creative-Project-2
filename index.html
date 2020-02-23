@@ -12,62 +12,123 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="logo">
-      <p class="logo-text">Converter</p>
-    </div>
-    <div class="converter-body">
-      <div class="amount">
-          <label for="money-dollar">Enter Amount:</label>
-          <input type="text" name="amount-input" value="Number Only">
+  <div class="Content">
+    <div class="headerContainer">
+      <div class="logo">
+        <p class="logo-text">Currency</p>
       </div>
-      <div class="Currency-From">
-        <label for="from">From:</label>
-          <select id="From">
-            <option value="usd">USD -	United States Dollar</option>
-            <option value="eur">EUR - Euro</option>
-            <option value="jpy">JPY - Japanese Yen</option>
-            <option value="gbp">GBP - Pound Sterling</option>
-            <option value="aud">AUD - Austrlian Dollar</option>
-            <option value="cad">CAD - Canadian Dollar</option>
-            <option value="chf">CHF - Swiss Franc</option>
-            <option value="cny">CNY - Chinese Yuan</option>
-            <option value="hkd">HKD - Hong Kong Dollar</option>
-            <option value="nzd">NZD - New Zealand Dollar</option>
-        </select>
+
+        <div class="block-function">
+          <div class="block-after-Logo">
+            <div class="converter-body">
+              <h1 id="title">Converter</h1>
+              <div class="amount">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Amount:</span>
+                  </div>
+                  <input type="text" id= "convertAmount" class="form-control" placeholder="Numbers Only" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+              </div>
+              <div class="selectForm">
+                <div class="Currency-From ">
+                    <select id="From" class="btn btn-secondary dropdown-toggle">
+                      <option value="none" selected disabled hidden>Convert From</option>
+                      <option value="USD">USD -	United States Dollar</option>
+                      <option value="EUR">EUR - Euro</option>
+                      <option value="JPY">JPY - Japanese Yen</option>
+                      <option value="GBP">GBP - Pound Sterling</option>
+                      <option value="AUD">AUD - Austrlian Dollar</option>
+                      <option value="CAD">CAD - Canadian Dollar</option>
+                      <option value="CHF">CHF - Swiss Franc</option>
+                      <option value="CNY">CNY - Chinese Yuan</option>
+                      <option value="HKD">HKD - Hong Kong Dollar</option>
+                      <option value="NZD">NZD - New Zealand Dollar</option>
+                  </select>
+                </div>
+
+                <div class="Currency-From">
+                    <select id="To" class="btn btn-secondary dropdown-toggle">
+                      <option value="none" selected disabled hidden>Convert To</option>
+                      <option value="USD">USD -	United States Dollar</option>
+                      <option value="EUR">EUR - Euro</option>
+                      <option value="JPY">JPY - Japanese Yen</option>
+                      <option value="GBP">GBP - Pound Sterling</option>
+                      <option value="AUD">AUD - Austrlian Dollar</option>
+                      <option value="CAD">CAD - Canadian Dollar</option>
+                      <option value="CHF">CHF - Swiss Franc</option>
+                      <option value="CNY">CNY - Chinese Yuan</option>
+                      <option value="HKD">HKD - Hong Kong Dollar</option>
+                      <option value="NZD">NZD - New Zealand Dollar</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="submitButton">
+                <button type="button" class="btn btn-secondary btn-lg btn-block" id="convert">Convert</button>
+              </div>
+            </div>
+
+            <hr id="vr">
+
+            <div class="currentRate">
+              <div class="block-info">
+                <h1 id="title">Rates</h1>
+                <div class="currentRate-info">
+                  <p id="original-amount"> --- </p>
+                  <h1 id="converted-amount"> --- </h1>
+                  <p id="defaultVal">Please Enter Amount</p>
+                  <p id="lastUpdated">Last Update: ---</p>
+                </div>
+              </div>
+            </div>
+
+        </div>
+        <div class="disclaimer">
+            <p id="disclaimer-text">All figures are live mid-market rates, which are not available to consumers and are for informational purposes only.</p>
+        </div>
       </div>
-      <div class="Currency-From">
-        <label for="to">To:</label>
-          <select id="To">
-            <option value="usd">USD -	United States Dollar</option>
-            <option value="eur">EUR - Euro</option>
-            <option value="jpy">JPY - Japanese Yen</option>
-            <option value="gbp">GBP - Pound Sterling</option>
-            <option value="aud">AUD - Austrlian Dollar</option>
-            <option value="cad">CAD - Canadian Dollar</option>
-            <option value="chf">CHF - Swiss Franc</option>
-            <option value="cny">CNY - Chinese Yuan</option>
-            <option value="hkd">HKD - Hong Kong Dollar</option>
-            <option value="nzd">NZD - New Zealand Dollar</option>
-        </select>
+
+
+      <div class="CurrencyInfo">
+        <div class="exchangeRate">
+          <h1 id="title">Exchange Rate</h1>
+          <p id="baseCurrency">Based on 1 USD</p>
+          <div class="exchangeRate-Info">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">AUD</th>
+                  <th scope="col">CAD</th>
+                  <th scope="col">CNY</th>
+                  <th scope="col">JPY</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="AUD">-</td>
+                  <td id="CAD">-</td>
+                  <td id="CNY">-</td>
+                  <td id="JPY">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
+
     </div>
 
 
 
-    <div class="weatherInfo">
-      <div id="weatherResults">
-      </div>
-      <div id="forecastResults">
-      </div>
-    </div>
+  </div>
+
 
     <div class="out">
       <div class="footer">
-          <p class="footer-text"> Powered by OpenWeather.org, created and designed by Hongguang He. All Rights Reversed. For more information, visit <a href ="https://github.com/hongguanghe/Creative-Project-2" target="_blank" > Github</a> to find me. </p>
+          <p class="footer-text"> Powered by <a href="http://api.forex/" target="_blank" >API Forex</a>, created and designed by Hongguang He. All Rights Reversed. For more information, visit <a href ="https://github.com/hongguanghe/Creative-Project-2" target="_blank" > Github</a> to find me. </p>
       </div>
     </div>
-  </div>
 
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
